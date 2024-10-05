@@ -1,17 +1,9 @@
-"use client"
-
 import React from 'react'
-import upload from '../components/upload'
-import { Button } from '@/components/ui/button'
-import { CldUploadWidget } from 'next-cloudinary'
-import cloudinery from 'cloudinary'
+import { CldUploadWidget } from 'next-cloudinary';
+import { Button } from './ui/button';
 
-function Home() {
-  // cloudinery.config({ cloud_name:process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-  //    api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
-  //   api_secret: process.env.CLOUDINARY_API_SECRET });
-
-   const handleSuccess = (result: any) => {
+function upload() {
+    const handleSuccess = (result: any) => {
         console.log(result);
     };
     const handleError = (error: any) => {
@@ -45,4 +37,4 @@ function Home() {
   )
 }
 
-export default Home
+export default upload
