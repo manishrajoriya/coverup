@@ -4,7 +4,7 @@ import { useState, ChangeEvent, FormEvent } from 'react';
 
 export default function Upload() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+  // const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [error, setError] = useState<string>('');
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -28,8 +28,8 @@ export default function Upload() {
 
    console.log(res);
     
-    // if (res.data) {
-    //   setUploadedImage(data.imageUrl);
+    // if (res) {
+    //   setUploadedImage();
     // } else {
     //   setError(data.error);
     // }
@@ -53,14 +53,14 @@ export default function Upload() {
         </button>
       </form>
 
-      {error && <p className="text-red-500 mt-2">{error}</p>}
+      {/* {error && <p className="text-red-500 mt-2">{error}</p>} */}
 
-      {uploadedImage && (
+      {/* {uploadedImage && (
         <div className="mt-4">
           <p>Image uploaded successfully!</p>
           <img src={uploadedImage} alt="Uploaded" className="mt-2" width="200" />
         </div>
-      )}
+      )} */}
     </div>
   );
 }
