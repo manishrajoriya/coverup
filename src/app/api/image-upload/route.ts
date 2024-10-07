@@ -12,7 +12,7 @@ interface cloudinaryResponse {
   public_id: string;
 }
 
-console.log("upload working");
+// console.log("upload working");
 
 
 export async function POST(request: NextRequest) {
@@ -38,11 +38,11 @@ try {
         })
         .end(buffer);
     });
-    console.log(result);
+    // console.log(result);
     
     return NextResponse.json({public_id: result.public_id,url: result.url})
 } catch (error) {
   console.log("error in uploading file");
-  throw new Error("error in uploading file");
+  // throw new Error("error in uploading file");
 }
 }
